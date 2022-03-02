@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="kalkulator.css" />
+  </head>
+  <body>
+    <div class="center">
+      <form name="forms">
+        <input type="text" id="display" name="display" disabled/>
+        <div class="buttons">
+          <input type="button" onclick="dis('7')" id="seven" value="7" o />
+          <input type="button" onclick="dis('8')" id="eight" value="8" />
+          <input type="button" onclick="dis('9')" id="nine" value="9" />
+          <input type="button" onclick="dis('/')" id="divide" value="/" /><br />
+          <input type="button" onclick="dis('4')" id="four" value="4" />
+          <input type="button" onclick="dis('5')" id="five" value="5" />
+          <input type="button" onclick="dis('6')" id="six" value="6"/>
+          <input type="button" onclick="dis('*')" id="multi" value="*" /><br/>
+          <input type="button" onclick="dis('1')" id="one" value="1" />
+          <input type="button" onclick="dis('2')"  id="two" value="2" />
+          <input type="button" onclick="dis('3')" id="three" value="3" />
+          <input type="button" onclick="dis('-')" id="subs" value="-" /><br />
+          <input type="button" onclick="dis('.')" id="dot" value="." />
+          <input type="button" onclick="dis('0')" id="zero" value="0" />
+          <input type="button" onclick="dis('+')" id="add" value="+"  />
+          <input type="button" onclick="clr()"id="clear" value="C" /><br />
+          <input type="button" onclick="calculate()" id="equal" value="="/>
+        </div>
+      </form>
+    </div>
+
+  <script>
+      
+      function dis(val)
+{
+document.getElementById("display").value+=val
+ }
+
+function calculate()
+{
+let x = document.getElementById("display").value
+let y = eval(x)
+document.getElementById("display").value = y
+}
+
+function clr()
+{
+document.getElementById("display").value = ""
+}
+
+      
+
+      
+    </script>
+
+  </body>
+</html>
